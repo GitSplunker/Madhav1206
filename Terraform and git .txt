@@ -1,0 +1,358 @@
+﻿Resume wise questions:
+1. Can you describe your experience as an AWS DevOps Engineer and Linux System Administrator?
+2. What tools and technologies have you worked with in your role as a DevOps engineer?
+3. Can you provide examples of projects you have worked on, specifically in relation to AWS and Azure?
+4. How have you utilized scripting languages like Bash and Python in your work?
+5. Can you explain your experience with monitoring tools such as Cloud Watch and Grafana?
+6. Have you worked with any specific clients or companies in your previous roles? If so, can you provide details about the projects you were involved in?
+7. How have you utilized Git and Jenkins for version control and continuous integration?
+8. Can you describe any experience you have with containerization technologies like Docker and Kubernetes?
+9. Have you worked with any configuration management tools such as Chef or Terraform?
+10. Can you provide examples of your experience in troubleshooting and resolving issues in both on-premise and cloud environments?
+
+Question 1: You are asked to provide a high-level summary of the Kubernetes cluster architecture to your team. 
+Which of the following statements BEST describes the key components?
+
+A:  Kubernetes cluster has control plane nodes with components like the API server, scheduler, and controllers. 
+It also has worker nodes to run applications, and a distributed data store like etcd.
+The main components of a Kubernetes cluster are pods, services, replica sets and namespaces that all run on top of the nodes.
+A Kubernetes cluster consists of a set of worker nodes and a master node that manages them. Worker nodes run pod containers while the master handles scheduling.
+The cluster contains a Kubernetes API server, etcd, controller manager, scheduler and DNS run on the master. Worker nodes run kubelet, kube-proxy and container runtimes.
+
+Question 2: You are responsible for managing a highly available and scalable containerized application on Amazon EKS for a retail company. 
+The application is deployed across multiple Availability Zones for fault tolerance.
+ When setting up an Ingress controller for your containerized application on Amazon EKS, which of the following statements is true?
+
+Ingress controllers are automatically provisioned by AWS EKS, and no additional configuration is required.
+An Ingress controller is primarily responsible for routing internal pod-to-pod traffic within your EKS cluster.
+Ingress controllers are only necessary when deploying applications in a single Availability Zone.
+Ingress controllers are used to define routing rules for external traffic coming to your containerized application in EKS cluster.
+Question 3: You are a DevOps engineer tasked with building a new continuous delivery pipeline to deploy applications on an EKS cluster. 
+Your team is curious about using GitOps but needs to know the key difference between GitOps and traditional CI/CD workflow.
+ Which of the following BEST summarizes this difference?
+ 
+ *#Q1 - Security in CI/CD:*
+*Scenario:* Crafting a CI/CD pipeline for a sensitive app – How do you ensure security at each stage?
+*Answer:* Fortify with source code scanning, artifact signing, and IAM controls. AWS CodePipeline and IAM bring automated security testing, while meticulous deployment entails security group configurations, encryption, and rigorous testing.
+
+*#Q2 - Scalability:*
+*Scenario:* App traffic surges – How to dynamically scale resources in AWS?
+*Answer:* Empower with AWS Auto Scaling for adaptive resource adjustments. Employ AWS Elastic Load Balancing for traffic distribution and consider AWS Lambda for sudden spikes. CloudWatch metrics steer scaling policies for optimal resource utilization.
+
+*#Q3 - Disaster Recovery:*
+*Scenario:* Critical infrastructure failure – Strategy for swift recovery, leveraging AWS?
+*Answer:* Deploy AWS services like S3 for robust backups, AWS Backup for centralized management, and AWS CloudFormation for rapid resource recreation. Minimize downtime with AWS Elastic Beanstalk and Route 53 for DNS failover.
+
+*#Q4 - Cost Optimization:*
+*Scenario:* Escalating AWS costs concern the team – How to optimize without compromising efficiency?
+*Answer:* Harness AWS Cost Explorer for in-depth cost analysis, AWS Budgets for vigilant monitoring, and auto-scaling for resource alignment. Utilize Reserved Instances or Savings Plans for cost predictability, regularly reviewing and adapting configurations based on usage patterns.
+
+A: GitOps workflows use git for source control while traditional CI/CD workflows do not.
+GitOps uses a push process in which changes are pushed onto the cluster…
+
+
+
+what is s3?
+what encrption used in ur s3 bucket?
+how to give particular object permsiion in bucket?
+how to give bucket permssion to  partcualt user?
+what is object lock?
+what is versioning?
+how we are moving object from one strorage to another
+tell me auto scaling polices
+
+
+
+
+************************************AWS *************************************************************: 
+There are three cloud types, which are mentioned below:
+
+Public Cloud: 
+the resources and services that are provided by third-party service providers are available to customers via the Internet.
+Private Cloud: 
+In a private cloud, the resources and services are managed in-house or by third parties exclusively for a particular organization.
+Hybrid Cloud: 
+It is a combination of public and private cloud types. 
+*************************************************************************************************************************************
+The decision whether to run the services on public or private networks depends on some parameters such as the sensitivity of the data and applications,
+ industry certifications, required standards, etc.
+ #Basic #DevOps/AWS Interview Questions
+
+->What is AWS?
+->What is a cloud? 
+->What is EC2? 
+->What is VPC? 
+->What is AZ?
+->What is ELB? 
+->What is VPC peering? 
+->What is the aim of VPC peering? 
+->Why use VPC peering, real-time example? 
+->What is SG? 11. What is cloud front/CDN? 
+->What is a lambda, what is the use of it? 
+->What have you developed using Lambda? 
+->What automation have you done with lambda? 
+->What is cloud watch? 
+->What is cloud formation? 
+->What is DevOps? 
+->What are Agile and waterfall methods? 
+->What tools does DevOps contain? 
+->What is the git lifecycle?
+->What is build? Explain technically. 
+->What is automation in DevOps? 
+->What is CI/CD? 
+->What are the stages in Jenkins? 
+->Is Only Jenkins enough for automation? 
+->Where will deploy the application? 
+->Difference between NaCl and SG? 
+->S3 lifecycle? 
+->What is the use of the IAM role? 
+->How many subnets are assigned to the routing table? 
+->What is the static IP? 
+->How will get access to private subnets? 
+->Can you increase the size of the root volume without shutting down the instance? 
+->Df –h?
+->What is ELB? How many types are there? 
+->What is autoscaling? 
+->What is the hosted zone and what uses of the recordset? 
+->Types in R53?
+->How will take up backup for volumes? 
+->How to encrypt the root volume? 
+->How will access AS account? 
+->What is the subnet group in DB? 
+->How do you connect to Windows instances? 
+->Port numbers of RDP, SSH, and HTTPS? 
+->What is the difference between EBS, S3, and EFS? 
+->What type of data do you store in s3 and EBS? 
+->Replication s3? 
+->Why use events in Cloudwatch in AWS? 
+->What is the difference between VPC-level security and system-level security? 
+->If you lost the pem file then how will you connect to EC2?
+**********************************************
+1. How do you create a secret in Kubernetes and export that secret to a file? Please provide a fully functional script.?
+A:  Kubernetes, you can create a secret using the kubectl create secret command. 
+example of how you can create a generic secret and then export it to a file:
+#!/bin/bash
+
+# Define the secret data
+SECRET_DATA="username=admin\npassword=mysecretpassword"
+
+# Create a Kubernetes secret
+kubectl create secret generic my-secret --from-literal=credentials="$SECRET_DATA"
+
+# Export the secret to a YAML file
+kubectl get secret my-secret -o yaml > my-secret.yaml
+
+echo "Secret 'my-secret' created and exported to 'my-secret.yaml'"
+Explanation:
+
+The kubectl create secret command is used to create a generic secret named my-secret.
+The --from-literal flag is used to specify the secret data. In this example, it includes a username and password.
+The kubectl get secret command with the -o yaml flag is used to retrieve the secret in YAML format.
+The output is then redirected to a file named my-secret.yaml.
+you can customize the script based on your specific secret data and requirements. 
+
+
+2. Create a Terraform script that retrieves values from AWS Secrets Manager and utilizes those values in a resource. Please provide a fully functional module?
+A:To create a Terraform script that retrieves values from AWS Secrets Manager and uses those values in a resource, 
+you can follow the example below. 
+This example assumes you have the AWS CLI configured and Terraform installed.
+provider "aws" {
+  region = "us-east-1"  # Set your desired AWS region
+}
+
+data "aws_secretsmanager_secret" "my_secret" {
+  name = "my-secret"  # Replace with your secret name in AWS Secrets Manager
+}
+
+resource "aws_instance" "example_instance" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  
+  // Use the secret values retrieved from AWS Secrets Manager
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Username: ${data.aws_secretsmanager_secret.my_secret.secret_string["username"]}" >> /tmp/secret_values.txt
+              echo "Password: ${data.aws_secretsmanager_secret.my_secret.secret_string["password"]}" >> /tmp/secret_values.txt
+              EOF
+}
+Explanation:
+
+Provider Configuration:
+
+The provider block configures the AWS provider. Replace the region with your desired AWS region.
+Data Block for AWS Secrets Manager:
+
+The data "aws_secretsmanager_secret" block retrieves secret values from AWS Secrets Manager. Replace "my-secret" with the name of your secret.
+Resource Block for AWS EC2 Instance:
+
+The resource "aws_instance" block creates an example EC2 instance. 
+Modify the ami and instance_type accordingly.
+The user_data field in the EC2 instance configuration uses the retrieved secret values. 
+In this example, it prints the username and password to a temporary file. 
+You can customize this based on your use case.
+Before running the Terraform script, make sure to authenticate with AWS using the AWS CLI (aws configure) and ensure that your IAM user or role has the necessary permissions to access AWS Secrets Manager and create EC2 instances.
+
+After creating the Terraform script, run the following commands in the terminal:
+
+bash
+Copy code
+terraform init
+terraform apply
+3. AWS IAM: Write the steps to create an IAM policy that allows permissions to list, read, and write to S3 buckets with names starting with "dev-".?
+A: AM policy that allows permissions to list, read, and write to S3 buckets with names starting with "dev-", you can follow these steps:
+
+Navigate to the AWS IAM Console:
+
+Log in to the AWS Management Console.
+Open the Identity and Access Management (IAM) console.
+Create a New Policy:
+
+In the IAM dashboard, select "Policies" from the left navigation pane.
+Click on the "Create policy" button.
+Choose a Service:
+
+In the "Create Policy" page, click on the "JSON" tab.
+Replace the existing policy document with the following JSON policy,
+ which grants the required permissions:
+json
+Copy code
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::dev-*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": "arn:aws:s3:::dev-*/*"
+    }
+  ]
+}
+Review and Save:
+
+Click on the "Review policy" button.
+Provide a meaningful name and description for the policy.
+Click on the "Create policy" button.
+
+Attach Policy to IAM User or Group:
+
+After creating the policy, you need to attach it to an IAM user or group.
+Go to the "Users" or "Groups" section in the IAM console.
+Choose the user or group you want to grant permissions to.
+Click on the "Add permissions" or "Attach policies" button, and search for the policy you created.
+
+Now, the IAM user or group associated with this policy will have the necessary permissions to list, read, and write to S3 buckets with names starting with "dev-".
+4. How would you implement auto-scaling for pods in Kubernetes when resource utilization exceeds 70%? Please provide a fully functional script.?
+A: apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:latest
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+
+---
+
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: my-app-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-app
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+		Explanation:
+
+Deployment:
+
+The first part defines a simple Deployment for your application (my-app). Adjust the number of replicas, container image, and resource limits as needed.
+HorizontalPodAutoscaler (HPA):
+
+The second part defines an HPA that references the deployment (my-app).
+minReplicas and maxReplicas set the desired minimum and maximum number of replicas.
+The metrics section specifies the resource metric (cpu) and the target average utilization (70%). Adjust the values according to your requirements.
+Apply this YAML configuration using the following command:
+
+bash
+Copy code
+kubectl apply -f your-autoscaling-file.yaml
+This example assumes that your pods expose CPU utilization as a metric. Ensure that your containers have resource limits set for CPU (resources.limits.cpu and resources.requests.cpu).
+ Adjust the values based on your application's resource requirements.
+
+5. Explain the differences between a reverse proxy and a forward proxy.?
+ A: A reverse proxy and a forward proxy are both intermediaries in the communication between clients and servers, but they operate in different ways and serve distinct purposes. Here are the key differences between a reverse proxy and a forward proxy:
+
+Reverse Proxy:
+Direction of Traffic:
+
+Reverse Proxy: Handles requests from clients on behalf of servers. It sits between clients and backend servers, forwarding requests from clients to servers.
+Use Case:
+
+Reverse Proxy: Often used to improve security, performance, and scalability of backend servers. It can also be employed for load balancing, SSL termination, caching, and serving static content.
+Visibility to Clients:
+
+Reverse Proxy: Clients are unaware of the existence of backend servers. All requests appear as if they are directed at the reverse proxy, which then forwards them to the appropriate server.
+Server Protection:
+
+Reverse Proxy: Shields backend servers from direct exposure to the internet. Clients only communicate with the reverse proxy, which adds an additional layer of security.
+Examples:
+
+Reverse Proxy: Nginx, Apache HTTP Server (when configured as a reverse proxy), HAProxy.
+Forward Proxy:
+Direction of Traffic:
+
+Forward Proxy: Handles requests from clients on their behalf. Clients connect to the forward proxy, which forwards their requests to external servers.
+Use Case:
+
+Forward Proxy: Primarily used for providing clients with anonymity, content filtering, access control, and caching. It is often employed in corporate environments to control and monitor internet access.
+Visibility to Clients:
+
+Forward Proxy: Clients are aware that they are using a proxy. They configure their applications or systems to route traffic through the forward proxy.
+Client Protection:
+
+Forward Proxy: Provides privacy and security for clients by hiding their IP addresses and encrypting communication with the external servers.
+Examples:
+
+Forward Proxy: Squid, Microsoft Forefront TMG (now deprecated), Blue Coat ProxySG.
+Summary:
+Reverse proxies are positioned in front of servers, handling client requests on behalf of servers. They are often used for load balancing, SSL termination, and protecting backend servers.
+
+Forward proxies are situated between clients and external servers, handling client requests on behalf of clients. They are commonly used for providing anonymity, access control, and content filtering.
+
